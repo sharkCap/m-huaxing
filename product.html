@@ -11,15 +11,14 @@
   <meta name="keywords" content="" />
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link rel="stylesheet" href="./css/style.css" />
-  <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="./js/mHome.js"></script>
-</head>
+
 
 <body>
   <div class="box box-zy">
     <!--head-->
     <div class="head-box">
-      <div class="fh"> <img src="./img/fh.png" onClick="javascript:window.history.go(-1)" alt="返回"> </div>
+      <div class="fh"> <img src="./img/fh.png" onClick="javascript:window.history.go(-1)" alt="返回">
+      </div>
       <h2>产品中心</h2>
       <ul class="nva-btn" id="nva-box">
         <li></li>
@@ -30,52 +29,22 @@
     <!--导航-->
     <div class="nva-box" id="nva">
       <ul class="nva-list">
-        <li><a href="">网站首页</a></li>
-        <li><a href="">关于我们</a></li>
-        <li><a href="">产品中心</a></li>
+        <li><a href="./index.html">网站首页</a></li>
+        <li><a href="./about.html">关于我们</a></li>
+        <li><a href="./product.html">产品中心</a></li>
         <li><a href="">联系我们</a></li>
       </ul>
     </div>
 
     <div class="zy-list">
-      <h2>产品中心</h2>
+      <h2></h2>
       <ul>
-        <li><a href="/?m=home&c=Lists&a=index&tid=8">汽车行业</a></li>
-        <li><a href="/?m=home&c=Lists&a=index&tid=9">电子行业</a></li>
+        <li><a href="./product.html?type=1">汽车行业</a></li>
+        <li><a href="./product.html?type=2">电子行业</a></li>
       </ul>
 
     </div>
     <ul class="product-list">
-      <li>
-        <a href="./detail.html"> <img src="./img/panzi.jpg" alt="内圆磨削用超硬材料砂轮Superhard" />
-          <p>内圆磨削用超硬材料砂轮Superhard</p>
-        </a>
-      </li>
-      <li>
-        <a href=""> <img src="./img/panzi.jpg" alt="汽车零部件磨削用磨盘Grinding D" />
-          <p>汽车零部件磨削用磨盘Grinding D</p>
-        </a>
-      </li>
-      <li>
-        <a href=""> <img src="./img/panzi.jpg" alt="高精度超薄超硬材料切割砂轮High Pr" />
-          <p>高精度超薄超硬材料切割砂轮High Pr</p>
-        </a>
-      </li>
-      <li>
-        <a href=""> <img src="./img/panzi.jpg" alt="CNC工具磨床配套用超硬材料砂轮Supe" />
-          <p>CNC工具磨床配套用超硬材料砂轮Supe</p>
-        </a>
-      </li>
-      <li>
-        <a href=""> <img src="./img/panzi.jpg" alt="半导体减薄砂轮Semiconductor" />
-          <p>半导体减薄砂轮Semiconductor</p>
-        </a>
-      </li>
-      <li>
-        <a href=""> <img src="./img/panzi.jpg" alt="凸轮轴、曲轴磨削用高速陶瓷CBN 砂轮V" />
-          <p>凸轮轴、曲轴磨削用高速陶瓷CBN 砂轮V</p>
-        </a>
-      </li>
       <div class="clearfix"></div>
     </ul>
   </div>
@@ -96,8 +65,26 @@
 
     <div class="clearfix"></div>
   </ul>
-  <!-- 应用插件标签 start -->
-  <!-- 应用插件标签 end -->
+
+  <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./js/mHome.js"></script>
+  <script type="text/javascript" src="./js/data.js"></script>
+  </head>
+  <script>
+
+    const type = window.location.search;
+
+    if (!type) {
+      getList();
+    }
+    if (type.includes(1)) {
+      getList(1);
+    }
+    if (type.includes(2)) {
+      getList(2);
+    }
+
+  </script>
 </body>
 
 </html>
