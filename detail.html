@@ -8,11 +8,19 @@
   <meta content="telephone=no" name="format-detection">
   <title>内圆磨削用超硬材料砂轮Superhard Materials Grinding Wheels for Internal Grinding_郑州磨料磨具磨削研究所有限公司</title>
   <meta name="keywords" content="" />
-  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link rel="stylesheet" href="./css/style.css" />
-  <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="./js/mHome.js"></script>
+
   <style>
+    .container {
+      padding: .2rem;
+      padding-top: 0;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: rgb(79, 129, 189);
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -22,69 +30,38 @@
     <div class="head-box">
       <div class="fh"> <img src="./img/fh.png" onClick="javascript:window.history.go(-1)" alt="返回"> </div>
       <h2>产品中心</h2>
-      <ul class="nva-btn" id="nva-box">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <!--导航-->
-    <div class="nva-box" id="nva">
-      <ul class="nva-list">
-        <li><a href="./index.html">网站首页</a></li>
-        <li><a href="./about.html">关于我们</a></li>
-        <li><a href="./product.html">产品中心</a></li>
-        <li><a href="">联系我们</a></li>
-      </ul>
     </div>
 
-    <div class="zy-list">
-      <h2>汽车行业</h2>
-    </div>
     <div class="zy-box">
       <h1>图片描述</h1>
       <div class="zy-nr">
-        <p><img src="./img/panzi.jpg" title="" alt="内圆磨削用超硬材料砂轮1 (2).png" /></p>
-
-        <h3 style="color: rgb(79, 129, 189); font-size: 18px;"><strong>主要特点</strong></h3>
-        <p>磨削效率高/ 加工工件精度高/ 工件尺寸一致性好/ 砂轮使用寿命长</p>
-
-        <h3 style="color: rgb(79, 129, 189); font-size: 18px;"><strong>主要特点</strong></h3>
-        <p>High efficiency / High workpiece
-          precision / Good
-          workpiece consistency / Long life
-        </p>
-        <p><img src="./img/panzi.jpg" title="" alt="内圆磨削用超硬材料砂轮2 (2).png" /></p>
-
-        <h3 style="color: rgb(79, 129, 189); font-size: 18px;"><strong>主要特点</strong></h3>
-        <p>汽车发动机液压挺杆/ 汽车转向泵定子/ 空调压缩机滚子、气缸、法兰盖/等速万向节球笼及内外球道磨削。</p>
-
-        <p><img src="./img/panzi.jpg" title="" alt="内圆磨削用超硬材料砂轮3 (2).jpg" /></p>
         <div class="placeholder"></div>
       </div>
     </div>
   </div>
-  <!--底部--->
-  <ul class="dib">
-    <li> <a href=""> <img src="./img/panzi.jpg">
-        <p>主页</p>
-      </a> </li>
-    <li> <a href="tel:400-6608-121"> <img src="./img/panzi.jpg">
-        <p>电话</p>
-      </a> </li>
-    <li> <a href="sms:0371-67657950"> <img src="./img/panzi.jpg">
-        <p>咨询</p>
-      </a> </li>
-    <li> <a href=""> <img src="./img/panzi.jpg">
-        <p>导航</p>
-      </a> </li>
-
-    <div class="clearfix"></div>
-  </ul>
 </body>
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./js/mHome.js"></script>
 <script>
+
   const data = JSON.parse(localStorage.getItem('productInfo'))
-  console.log(data);
+
+  let str = '';
+  data.info.forEach(el => {
+    str += `
+      <div>
+        <img src="${el.image}"  />
+        <div class="container">
+          <h3>${el.subTitle}</h3>
+          <p>${el.info}</p>  
+        </div>
+      </div>
+     `;
+  });
+
+  $('.zy-nr').html(str);
+
+
 </script>
 
 </html>

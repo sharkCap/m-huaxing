@@ -12,44 +12,61 @@
 
   <link rel="stylesheet" href="./css/style.css" />
 
+  <style>
+    .head-box-home {
+      background-color: #fff;
+      height: 1rem;
+      padding: 0.1rem .25rem;
+      position: relative;
+      box-shadow: 0px 1px 5px 0px rgba(6, 0, 1, 0.1);
+      -webkit-box-shadow: 0px 1px 5px 0px rgba(6, 0, 1, 0.1);
+      font-family: "楷体",
+        "楷体_GB2312";
+      z-index: 100;
+    }
+
+    .head-box-home p {
+      font-size: 0.3rem;
+      text-align: right;
+    }
+
+    .head-box-home .head-logo {
+      font-family: "楷体",
+        "楷体_GB2312";
+      font-weight: bold;
+      font-size: 0.5rem;
+    }
+  </style>
 
 </head>
 
 <body>
   <div class="box">
     <!--head-->
-    <div class="head-box">
-      <div class="head-logo"> <a href=""><img src="./img/logo.png" alt="河南华兴钻石"> </a></div>
-      <ul class="nva-btn" id="nva-box">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <!--导航-->
-    <div class="nva-box" id="nva">
-      <ul class="nva-list">
-        <li><a href="./index.html">网站首页</a></li>
-        <li><a href="./about.html">关于我们</a></li>
-        <li><a href="./product.html">产品中心</a></li>
-        <li><a href="">联系我们</a></li>
-      </ul>
+    <div class="head-box-home">
+      <h1 class="head-logo">
+        河南华兴钻石科技有限公司
+      </h1>
+      <p>
+        联系电话：18803880857
+      </p>
     </div>
 
     <div class="product-box">
       <div class="bt">
         <h2>产品中心</h2>
-        <a href="./product.html">MORE+</a>
       </div>
       <ul class="product-list">
       </ul>
     </div>
     <div class="about-box">
       <div class="about">
-        <div class="about-img"> <img src="./img/panzi.jpg"> </div>
+        <div class="about-img"> <img src="./img/company.jpg"> </div>
         <div class="about-nr">
-          <h2>河南华兴钻石</h2>
-          <p>河南华兴钻石...</p>
+          <h2>河南华兴钻石科技有限公司</h2>
+          <p style="text-indent: 2em;">
+            河南华兴钻石科技有限公司，注册地位于柘城县工业园区学府大道南，法定代表人为李延新。经营范围包括金刚石、金刚石微粉、金刚石研磨膏、金刚石砂轮、金刚石磨盘、CBN微粉、CBN砂轮、CBN磨盘、砂轮原材料磨料磨具的生产销售及进出口业务.
+          </p>
         </div>
       </div>
     </div>
@@ -58,23 +75,7 @@
     </div>
 
   </div>
-  <!--底部--->
-  <ul class="dib">
-    <li> <a href=""> <img src="./img/panzi.jpg">
-        <p>主页</p>
-      </a> </li>
-    <li> <a href=""> <img src="./img/panzi.jpg">
-        <p>电话</p>
-      </a> </li>
-    <li> <a href=""> <img src="./img/panzi.jpg">
-        <p>咨询</p>
-      </a> </li>
-    <li> <a href=""> <img src="./img/panzi.jpg">
-        <p>导航</p>
-      </a> </li>
 
-    <div class="clearfix"></div>
-  </ul>
   <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="./js/mHome.js"></script>
   <script type="text/javascript" src="./js/data.js"></script>
