@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="telephone=no" name="format-detection">
-  <title>内圆磨削用超硬材料砂轮Superhard Materials Grinding Wheels for Internal Grinding_郑州磨料磨具磨削研究所有限公司</title>
+  <title>河南华兴钻石科技有限公司</title>
   <meta name="keywords" content="" />
   <link rel="stylesheet" href="./css/style.css" />
 
@@ -38,6 +38,14 @@
         <div class="placeholder"></div>
       </div>
     </div>
+
+    <div class="box-bg">
+      <div class="foot-bq">Copyright © 河南华兴钻石科技有限公司 版权所有
+        <p>
+          <a href="https://beian.miit.gov.cn/" rel="nofollow" target="_blank">豫ICP备2022011084号-1</a>
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
@@ -50,10 +58,10 @@
   data.info.forEach(el => {
     str += `
       <div>
-        <img src="${el.image}"  />
+        <img src="${el.image ? el.image : ''}"  />
         <div class="container">
-          <h3>${el.subTitle}</h3>
-          <p>${el.info}</p>  
+          <h3>${el.subTitle ? el.subTitle : ''}</h3>
+          <p>${el.info ? el.info : ''}</p>  
         </div>
       </div>
      `;

@@ -227,6 +227,7 @@ body{
 }
 .product-box{
 	margin-top: .32rem;
+  margin-bottom: 1.4rem;
 }
 .product-list li{
 	width: 50%;
@@ -354,7 +355,6 @@ body{
 .box-bg{
   bottom: 0;
 	background-color: #fff;
-	padding-top: .32rem;
 }
 .news-list li{
 	padding: 0 .25rem;
